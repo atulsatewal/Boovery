@@ -1,0 +1,82 @@
+@media (min-width: 979px) {
+
+  #midCol.affix-top {
+      position:fixed;
+  	  width:265px;
+  	  margin-right:10px;
+  	  
+  }
+  
+  #midCol.affix {
+      position:static;
+      width:100%;
+  }
+
+}
+
+@media (min-width: 767px) {
+  .affix,.affix-top {
+      position:fixed;
+  }
+}
+
+ .col-md-4,.col-md-8{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+#pgspan{
+    width: 300px;
+    text-align: left;
+    border: 1px solid #ccc;
+}    
+#basic-addon3,#basic-url{
+        width:400px;
+        text-align: left;
+    }
+.custom-select{
+         width:400px;
+         text-align: left;
+         height: 28px;
+         color: grey;
+    }
+.form-check{
+        display: inline-block;
+        width:190px;
+    }
+#radioOptions{
+        border: 1px solid #ccc;
+        width:400px;
+    }
+#dependent1,#dependent2,#dependent3,#dependent4{
+        display: none;
+    }
+#periodDate{
+        width:175px;
+    }
+#periodTo{
+        width:50px;
+    }
+#diary{
+        width:115px;
+    }
+#dated{
+        width:170px;
+    }
+   .heading{
+    text-align: center;
+       color:white;
+       background-color:black;
+padding:20px 0px 20px 0px;
+border-radius:10px;
+    }
+h3{
+  text-align:center;
+}
+.bt{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center}
+    
+.row{
+    padding: 10px 0px 10px 0px;
