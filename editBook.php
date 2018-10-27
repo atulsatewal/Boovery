@@ -60,7 +60,7 @@
                     $stmt1->bind_param('s', $_GET['id']);
                     $stmt1->execute();
                     $stmt1->store_result();
-                    $stmt1->bind_result( $id, $category_id,  $name, $description, $isbn, $author, $price, $img_url, $created_at, $updated_at );
+                    $stmt1->bind_result( $id, $category_id,  $name, $description, $isbn, $author, $price, $old_price, $img_url, $created_at, $updated_at );
 
                 }else if(DEBUG) echo $mysqli->error();
 

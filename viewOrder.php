@@ -14,30 +14,6 @@
       </ol>
     </section>
 
-    <?php
-
-    if(isset($_GET['success'])){
-      ?>
-        <div class="alert alert-success alert-dismissible">
-          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>Success!</strong> Record Updated successfully!
-        </div>
-      <?php
-    } else if(isset($_GET['error'])){
-
-?>
-
-<div class="alert alert-danger alert-dismissible">
-          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>Error!</strong> Could not update Record
-        </div>
-
-
-<?php
-
-    }
-
-    ?>
 
     <!-- Main content -->
     <section class="content">
@@ -50,64 +26,40 @@
           <!-- TABLE: LATEST ORDERS -->
           <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Edit Book</h3>
+              <h3 class="box-title"></h3>
             </div>
             <!-- /.box-header -->
               <div class="box-body">
             
-            <?php $sql = "SELECT * FROM items WHERE id = ?"; 
+            <?php $sql = "SELECT * FROM orders WHERE cart_id = ?";
             if($stmt1 = $mysqli->prepare($sql)){
                     $stmt1->bind_param('s', $_GET['id']);
                     $stmt1->execute();
                     $stmt1->store_result();
-                    $stmt1->bind_result( $id, $category_id,  $name, $description, $isbn, $author, $price, $img_url, $created_at, $updated_at );
+                    $stmt1->bind_result( $cart_id, $name, $country, $addressLine1, $addressLine2, $zipCode, $city, $phoneNo, $payementMethod, $status );
 
-                }else if(DEBUG) echo $mysqli->error();
+                }else echo mysqli_error($mysqli);
 
                 if($stmt1->fetch())
                 {
             ?>
-              
-            <form action="app_functions/createOrUpdateBook.php" method="post">
 
-              <input type="hidden" name = "id" value = "<?php echo $id; ?>"/>
-
-              <input type="hidden" name = "type" value = "update"/>
-              <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" value="<?php echo $name; ?>">
-    </div>
-
-    <div class="form-group">
-      <label for="description">Description:</label>
-      <input type="text" class="form-control" id="description" placeholder="Enter description" name="description" value="<?php echo $description; ?>">
-    </div>
-
-    <div class="form-group">
-      <label for="isbn">ISBN:</label>
-      <input type="number" class="form-control" id="isbn" placeholder="Enter isbn" name="isbn" value="<?php echo $isbn; ?>">
-    </div>
-
-    <div class="form-group">
-      <label for="author">Author:</label>
-      <input type="text" class="form-control" id="author" placeholder="Enter author" name="author" value="<?php echo $author; ?>">
-    </div>
-
-    <div class="form-group">
-      <label for="price">Price:</label>
-      <input type="text" class="form-control" id="price" placeholder="Enter price" name="price" value="<?php echo $price; ?>">
-    </div>
-
-    <div class="form-group">
-      <label for="img_url">Image URL:</label>
-      <input type="text" class="form-control" id="img_url" placeholder="Enter img_url" name="img_url" value="<?php echo $img_url; ?>">
-    </div>
-
-    <button type="submit" class="btn btn-primary">Submit</button>
-
-            </form>
-
-
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <td><?php echo $name; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Address</th>
+                            <td><?php echo  $addressLine1."<br>".$addressLine2."<br>".$city."<br>".$zipCode."<br>".$country;?></td>
+                        </tr>
+                        <tr>
+                            <th>Phone number</th>
+                            <td><?php echo $phoneNo; ?></td>
+                        </tr>
+                        </tbody>
+                    </table>
 
 
             <?php } else {?>
@@ -121,6 +73,70 @@
           </div>
           <!-- /.box -->
         </div>
+
+          <div>
+              <!-- TABLE: LATEST ORDERS -->
+              <div class="box box-info">
+                  <div class="box-header with-border">
+                      <h3 class="box-title">Items</h3>
+                  </div>
+                  <!-- /.box-header -->
+                  <div class="box-body">
+                      <!-- Order details -->
+                      <div class="order_list_container">
+
+                          <table class="table">
+                              <thead>
+                              <th>Name</th>
+                              <th>Quantity</th>
+                              <th>Price</th>
+                              <th>Total</th>
+                              </thead>
+                              <tbody>
+                              <?php
+                              $sql = "SELECT items.id, cart.id, items.name, items.description, items.price, cart_items.quantity , items.author, items.isbn, category.category_name, items.img_url 
+                        FROM items, category, cart_items, cart 
+                        WHERE cart.id = ? 
+                        AND cart.id = cart_items.cart_id 
+                        AND items.id = cart_items.item_id 
+                        AND items.category_id = category.id ";
+
+                              $total = 0;
+
+                              if($stmt1 = $mysqli->prepare($sql)){
+                                  $stmt1->bind_param('s', $_GET['id']);
+                                  $stmt1->execute();
+                                  $stmt1->store_result();
+                                  $stmt1->bind_result( $id, $cartId,  $name, $description,  $price, $quantity, $author, $isbn, $category_name, $img_url );
+
+                              }else if(DEBUG) echo $mysqli->error();
+
+                              while($stmt1->fetch())
+                              {
+                                  ?>
+
+                                  <tr>
+                                      <td><?php echo $name; ?></td>
+                                      <td><?php echo $quantity; ?></td>
+                                      <td><?php echo $price; ?></td>
+                                      <td><?php echo $price * $quantity; ?></td>
+                                  </tr>
+
+                                  <?php
+                                  $total += $price * $quantity;
+
+                              }?>
+
+
+                              </tbody>
+                          </table>
+                      </div>
+
+                  </div>
+                  <!-- /.box-body -->
+              </div>
+              <!-- /.box -->
+          </div>
      
         <!-- /.col -->
       </div>
