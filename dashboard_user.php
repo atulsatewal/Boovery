@@ -33,32 +33,32 @@
 									<li class="hassubs active">
 										<a href="index.html">Home</a>
 										<ul>
-											<li><a href="categories.html">Categories</a></li>
+											<li><a href="categories.php">Categories</a></li>
 											<li><a href="product.html">Product</a></li>
-											<li><a href="cart.html">Cart</a></li>
-											<li><a href="checkout.html">Check out</a></li>
-											<li><a href="contact.html">Contact</a></li>
+											<li><a href="cart.php">Cart</a></li>
+											<li><a href="checkout.php">Check out</a></li>
+											<li><a href="contact.php">Contact</a></li>
 										</ul>
 									</li>
 									<li class="hassubs">
-										<a href="categories.html">Categories</a>
+										<a href="categories.php">Categories</a>
 										<ul>
-											<li><a href="categories.html"></a></li>
-											<li><a href="categories.html">Anthology</a></li>
-											<li><a href="categories.html">Cook Book</a></li>
-											<li><a href="categories.html">Geographic Novel</a></li>
-											<li><a href="categories.html">Picture Book</a></li>
-											<li><a href="categories.html">Movie Novels</a></li>
+											<li><a href="categories.php"></a></li>
+											<li><a href="categories.php">Anthology</a></li>
+											<li><a href="categories.php">Cook Book</a></li>
+											<li><a href="categories.php">Geographic Novel</a></li>
+											<li><a href="categories.php">Picture Book</a></li>
+											<li><a href="categories.php">Movie Novels</a></li>
 										</ul>
 									</li>
 									<li><a href="#">Accessories</a></li>
 									<li><a href="#">logout</a></li>
-									<li><a href="contact.html">Contact</a></li>
+									<li><a href="contact.php">Contact</a></li>
 								</ul>
 							</nav>
 							<div class="header_extra ml-auto">
 								<div class="shopping_cart">
-									<a href="cart.html">
+									<a href="cart.php">
 										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 												 viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
 											<g>
@@ -142,26 +142,26 @@
 					<li class="page_menu_item has-children menu_mm">
 						<a href="index.html">Home<i class="fa fa-angle-down"></i></a>
 						<ul class="page_menu_selection menu_mm">
-							<li class="page_menu_item menu_mm"><a href="categories.html">Categories<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="categories.php">Categories<i class="fa fa-angle-down"></i></a></li>
 							<li class="page_menu_item menu_mm"><a href="product.html">Product<i class="fa fa-angle-down"></i></a></li>
-							<li class="page_menu_item menu_mm"><a href="cart.html">Cart<i class="fa fa-angle-down"></i></a></li>
-							<li class="page_menu_item menu_mm"><a href="checkout.html">Checkout<i class="fa fa-angle-down"></i></a></li>
-							<li class="page_menu_item menu_mm"><a href="contact.html">Contact<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="cart.php">Cart<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="checkout.php">Checkout<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="contact.php">Contact<i class="fa fa-angle-down"></i></a></li>
 						</ul>
 					</li>
 					<li class="page_menu_item has-children menu_mm">
-						<a href="categories.html">Categories<i class="fa fa-angle-down"></i></a>
+						<a href="categories.php">Categories<i class="fa fa-angle-down"></i></a>
 						<ul class="page_menu_selection menu_mm">
-							<li class="page_menu_item menu_mm"><a href="categories.html">Anthology<i class="fa fa-angle-down"></i></a></li>
-							<li class="page_menu_item menu_mm"><a href="categories.html">Cook Book<i class="fa fa-angle-down"></i></a></li>
-							<li class="page_menu_item menu_mm"><a href="categories.html">Geographic Novels<i class="fa fa-angle-down"></i></a></li>
-							<li class="page_menu_item menu_mm"><a href="categories.html">Picture Book<i class="fa fa-angle-down"></i></a></li>
-							<li class="page_menu_item menu_mm"><a href="categories.html">Movie Novels<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="categories.php">Anthology<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="categories.php">Cook Book<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="categories.php">Geographic Novels<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="categories.php">Picture Book<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="categories.php">Movie Novels<i class="fa fa-angle-down"></i></a></li>
 						</ul>
 					</li>
 					<li class="page_menu_item menu_mm"><a href="index.html">Accessories<i class="fa fa-angle-down"></i></a></li>
 					<li class="page_menu_item menu_mm"><a href="#">Offers<i class="fa fa-angle-down"></i></a></li>
-					<li class="page_menu_item menu_mm"><a href="contact.html">Contact<i class="fa fa-angle-down"></i></a></li>
+					<li class="page_menu_item menu_mm"><a href="contact.php">Contact<i class="fa fa-angle-down"></i></a></li>
 				</ul>
 			</div>
 		</div>
@@ -281,7 +281,7 @@
 					</div>
 					<div class="avds_small_content">
 						<div class="avds_title">Harry Potter</div>
-						<div class="avds_link"><a href="categories.html">See More</a></div>
+						<div class="avds_link"><a href="categories.php">See More</a></div>
 					</div>
 				</div>
 			</div>
@@ -291,7 +291,7 @@
 					<div class="avds_large_content">
 						<div class="avds_title">UMM WHATS THIS ? </div>
 						<div class="avds_text">We have lots of book for you...Choose wisely 😍</div>
-						<div class="avds_link avds_link_large"><a href="categories.html">See More</a></div>
+						<div class="avds_link avds_link_large"><a href="categories.php">See More</a></div>
 					</div>
 				</div>
 			</div>
@@ -324,7 +324,7 @@
                 <!-- Product -->
 								<div class="product">
 									<div class="product_image"><img src="<?php echo $img_url; ?>" alt=""></div>
-									<div class="product_extra product_new"><a href="categories.html">New</a></div>
+									<div class="product_extra product_new"><a href="categories.php">New</a></div>
 									<div class="product_content">
 										<div class="product_title"><a href="product.php?id=<?php echo $id; ?>"><?php echo $name; ?></a></div>
 										<div class="product_price"><?php echo $price; ?></div>
@@ -353,7 +353,7 @@
 						<div class="avds_xl_content">
 							<div class="avds_title">Amazing Relation</div>
 							<div class="avds_text">“Good friends, good books, and a sleepy conscience: this is the ideal life.” </div>
-							<div class="avds_link avds_xl_link"><a href="categories.html">See More</a></div>
+							<div class="avds_link avds_xl_link"><a href="categories.php">See More</a></div>
 						</div>
 					</div>
 				</div>
