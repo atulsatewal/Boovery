@@ -42,27 +42,4 @@ function rupee_to_word($number){
           $words[$point = $point % 10] : '';
   return $result;
 }
-
-
-function get_data_for_calcSheet($id){
-    
-    require 'includes/dbcon.php';
-        
-    $sql = "SELECT * FROM medical WHERE app_id = $id ";
-    $si = 0;
-    $string = '';
-    foreach ($con->query($sql) as $row) {
-    $si++;
-    $string.="<tr>
-    <td style='border: 1px solid black; font-size: 80%;'>$si</td>
-    <td style='border: 1px solid black; font-size: 80%;'>$row[bill_no_hosp]</td>
-    <td style='border: 1px solid black; font-size: 80%;'>$row[date]</td>
-    <td style='border: 1px solid black; font-size: 80%;'>$row[treatment]</td>
-    <td style='border: 1px solid black; font-size: 80%;'>$row[amt_asked]</td>
-    <td style='border: 1px solid black; font-size: 80%;'>$row[total]</td>
-    </tr>";
-    }
-    
-    return $string;
-}
  ?> 
