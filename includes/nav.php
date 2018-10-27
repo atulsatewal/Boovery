@@ -32,6 +32,11 @@
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>
         </li>
+                <li class="treeview <?php if($currentPage =='orders' ){echo 'active';}?>">
+                    <a href="orders.php">
+                        <i class="fa fa-dashboard"></i> <span>All Orders</span>
+                    </a>
+                </li>
 
         <li class="treeview <?php if($currentPage =='createBook' ){echo 'active';}?>">
           <a href="createBook.php">
