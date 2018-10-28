@@ -1,6 +1,6 @@
 <?php 
 
-$form17 = "<html lang='en'>
+$orderPDF = "<html lang='en'>
   <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -19,7 +19,7 @@ $form17 = "<html lang='en'>
       <div style='margin-top:15px;'><b><u>ADDL. DCP/SED</u></b></div>
       </div>      
   </body>
-</html>"
+</html>";
 
 ?>
 
