@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dedf67d1-a91e-4d7b-a869-9bef042bbc68" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/dbcon.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/dbcon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viewOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/viewOrder.php" afterDir="false" />
-    </list>
+    <list default="true" id="dedf67d1-a91e-4d7b-a869-9bef042bbc68" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +23,7 @@
         <counts>
           <entry key="html" value="1" />
           <entry key="js" value="1" />
-          <entry key="php" value="19" />
+          <entry key="php" value="20" />
           <entry key="sql" value="3" />
         </counts>
       </usages-collector>
@@ -35,18 +31,18 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="JavaScript" value="1" />
-          <entry key="PHP" value="19" />
+          <entry key="PHP" value="20" />
           <entry key="SQL" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="1931" />
+          <entry key="php" value="1943" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="1913" />
+          <entry key="PHP" value="1925" />
           <entry key="SQL" value="18" />
         </counts>
       </usages-collector>
@@ -54,11 +50,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viewOrder.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="139">
               <caret line="83" column="40" lean-forward="true" selection-start-line="83" selection-start-column="40" selection-end-line="83" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/editBook.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="62" column="117" selection-start-line="62" selection-start-column="117" selection-end-line="62" selection-end-column="117" />
             </state>
           </provider>
         </entry>
@@ -101,6 +106,7 @@
         <option value="$PROJECT_DIR$/orders.php" />
         <option value="$PROJECT_DIR$/includes/dbcon.php" />
         <option value="$PROJECT_DIR$/viewOrder.php" />
+        <option value="$PROJECT_DIR$/editBook.php" />
       </list>
     </option>
   </component>
@@ -168,24 +174,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540642582262</updated>
-      <workItem from="1540642583348" duration="10141000" />
+      <workItem from="1540642583348" duration="10577000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10141000" />
+    <option name="totallyTimeSpent" value="10577000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -321,6 +326,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
           <caret line="83" column="40" lean-forward="true" selection-start-line="83" selection-start-column="40" selection-end-line="83" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/editBook.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="62" column="117" selection-start-line="62" selection-start-column="117" selection-end-line="62" selection-end-column="117" />
         </state>
       </provider>
     </entry>
