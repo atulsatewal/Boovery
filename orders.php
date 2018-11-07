@@ -39,7 +39,7 @@
                                 <th>Country</th>
                                 <th>City</th>
                                 <th>Phone Number</th>
-                                <th>PView</th>
+                                <th>View</th>
                             </tr>
                             </thead>
                             <tbody>
