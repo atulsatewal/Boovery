@@ -29,12 +29,12 @@
           ?>
         <li class="treeview <?php if($currentPage =='dashboard_admin' ){echo 'active';}?>">
           <a href="dashboard_admin.php">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <i class="fa fa-book"></i> <span> All books </span>
           </a>
         </li>
                 <li class="treeview <?php if($currentPage =='orders' ){echo 'active';}?>">
                     <a href="orders.php">
-                        <i class="fa fa-dashboard"></i> <span>All Orders</span>
+                       <i class="fa fa-server"></i> <span>All Orders</span>
                     </a>
                 </li>
 
@@ -49,7 +49,7 @@
           
              <li class="treeview <?php if($currentPage =='logout' ){echo 'active';}?>">
           <a href="logout.php">
-            <i class="fa fa-dashboard"></i> <span>Logout</span>
+            <i class="fa fa-sign-out"></i> <span>Logout</span>
           </a>
         </li>
       </ul>

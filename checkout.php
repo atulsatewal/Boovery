@@ -32,7 +32,7 @@ sec_session_start();
 							<nav class="main_nav">
 								<ul>
 									<li class="hassubs active">
-										<a href="index.html">Home</a>
+										<a href="dashboard_user.php">Home</a>
 										<ul>
 											<li><a href="categories.php">Categories</a></li>
 											<li><a href="product.html">Product</a></li>
@@ -267,7 +267,7 @@ sec_session_start();
 									<label for="checkout_email">Email Address*</label>
 									<input type="phone" id="checkout_email" name="checkout_email" class="checkout_input" required="required" readonly="readonly" value="<?php echo $_SESSION['user_email'];?>">
 								</div>
-                                <button type="submit" class="btn button-primary">Place Order</button>
+                                <button type="submit" class="btn btn-outline-secondary">Place Order</button>
                             </form>
 						</div>
 					</div>

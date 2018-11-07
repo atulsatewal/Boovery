@@ -1,3 +1,8 @@
+<?php require("secure/db_connect.php");
+require("secure/functions.php");
+require("secure/config.php");
+sec_session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,29 +35,44 @@
 							<nav class="main_nav">
 								<ul>
 									<li class="hassubs active">
-										<a href="index.html">Home</a>
+										<a href="dashboard_user.php">Home</a>
 										<ul>
 											<li><a href="categories.php">Categories</a></li>
-											<li><a href="product.html">Product</a></li>
+											<li><a href="product.php">Product</a></li>
 											<li><a href="cart.php">Cart</a></li>
 											<li><a href="checkout.php">Check out</a></li>
 											<li><a href="contact.php">Contact</a></li>
 										</ul>
 									</li>
 									<li class="hassubs">
-										<a href="categories.php">Categories</a>
-										<ul>
-											<li><a href="categories.php">Category</a></li>
-											<li><a href="categories.php">Category</a></li>
-											<li><a href="categories.php">Category</a></li>
-											<li><a href="categories.php">Category</a></li>
-											<li><a href="categories.php">Category</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Accessories</a></li>
-									<li><a href="#">Offers</a></li>
-									<li><a href="contact.php">Contact</a></li>
-								</ul>
+                                        <a href="categories.php">Categories</a>
+                                   
+                
+                <ul>
+                      <?php
+                $sql = "SELECT category_name FROM category";
+
+                if($stmt1 = $mysqli->prepare($sql)){
+                    $stmt1->execute();
+                    $stmt1->store_result();
+                    $stmt1->bind_result($category_name);
+
+                }else if(DEBUG) echo $mysqli->error();
+
+                while($stmt1->fetch())
+                {
+                ?>
+				
+       	<li><a href="categories.php"><?php echo $category_name; ?></a></li>
+               <?php
+                    }
+                ?>                    
+                </ul>
+                </li>
+                   <li><a href="#">Accessories</a></li>
+				    <li><a href="#">Offers</a></li>
+					<li><a href="contact.php">Contact</a></li>
+						</ul>
 							</nav>
 							<div class="header_extra ml-auto">
 								<div class="shopping_cart">
@@ -138,7 +158,7 @@
 				</div>
 				<ul class="page_menu_nav menu_mm">
 					<li class="page_menu_item has-children menu_mm">
-						<a href="index.html">Home<i class="fa fa-angle-down"></i></a>
+						<a href="dashboard_user.php">Home<i class="fa fa-angle-down"></i></a>
 						<ul class="page_menu_selection menu_mm">
 							<li class="page_menu_item menu_mm"><a href="categories.php">Categories<i class="fa fa-angle-down"></i></a></li>
 							<li class="page_menu_item menu_mm"><a href="product.html">Product<i class="fa fa-angle-down"></i></a></li>

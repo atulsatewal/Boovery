@@ -28,7 +28,7 @@ try {
 
     $closeCart = "UPDATE cart SET status = 'closed' WHERE id = ?";
 
-    $insertOrder = "INSERT INTO orders(cart_id, name, country, addressLine1, addressLine2, zipCode, city, phoneNo, paymentMethod) VALUES ( ?, ?, ?, ?, ?, ?, ? ,?, ?)";
+    $insertOrder = "INSERT INTO orders(cart_id, name, country, addressLine1, addressLine2, zipCode, city, phoneNo, paymentMethod, email) VALUES ( ?, ?, ?, ?, ?, ?, ? ,?, ?, ?)";
 
     $cartId = null;
 
@@ -76,7 +76,7 @@ echo "CHALO KHEL SHURU KARE<br>";
 
     // Create order
     if($stmt1 = $mysqli->prepare($insertOrder)){
-        $stmt1->bind_param('sssssssss', $cartId, $name, $checkout_country, $checkout_address, $checkout_address_2, $checkout_zipcode, $checkout_city, $checkout_phone, $paymentMethod );
+        $stmt1->bind_param('ssssssssss', $cartId, $name, $checkout_country, $checkout_address, $checkout_address_2, $checkout_zipcode, $checkout_city, $checkout_phone, $paymentMethod, $checkout_email);
         if(!$stmt1->execute()){
             throw new Exception($mysqli->error);
         }

@@ -31,10 +31,10 @@
 							<nav class="main_nav">
 								<ul>
 									<li class="hassubs active">
-										<a href="index.html">Home</a>
+										<a href="dashboard_user.php">Home</a>
 										<ul>
 											<li><a href="categories.php">Categories</a></li>
-											<li><a href="product.html">Product</a></li>
+											<li><a href="product.php">Product</a></li>
 											<li><a href="cart.php">Cart</a></li>
 											<li><a href="checkout.php">Check out</a></li>
 											<li><a href="contact.php">Contact</a></li>
@@ -51,8 +51,8 @@
 											<li><a href="categories.php">Movie Novels</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Accessories</a></li>
-									<li><a href="#">logout</a></li>
+                                    <li><a href="checkout.php">Checkout</a></li>
+									<li><a href="logout.php">logout</a></li>
 									<li><a href="contact.php">Contact</a></li>
 								</ul>
 							</nav>

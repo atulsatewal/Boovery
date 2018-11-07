@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2018 at 05:24 AM
+-- Generation Time: Nov 07, 2018 at 10:14 AM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -30,15 +30,28 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `cart` (
   `id` int(11) NOT NULL,
-  `delivery_address` varchar(500) NOT NULL,
-  `city` varchar(100) NOT NULL,
-  `pincode` int(6) NOT NULL,
-  `country` varchar(50) NOT NULL,
-  `payment_mode` enum('cash','online','','') NOT NULL DEFAULT 'cash',
-  `tax` float(8,2) NOT NULL DEFAULT '0.00',
+  `user_id` int(10) NOT NULL,
+  `status` enum('open','closed','','') NOT NULL DEFAULT 'open',
+  `delivery_address` varchar(500) DEFAULT NULL,
+  `city` varchar(100) DEFAULT NULL,
+  `pincode` int(6) DEFAULT NULL,
+  `country` varchar(50) DEFAULT NULL,
+  `payment_mode` enum('cash','online','','') DEFAULT 'cash',
+  `tax` float(8,2) DEFAULT '0.00',
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`id`, `user_id`, `status`, `delivery_address`, `city`, `pincode`, `country`, `payment_mode`, `tax`, `updated_at`, `created_at`) VALUES
+(3, 2, 'closed', NULL, NULL, NULL, NULL, 'cash', 0.00, '2018-10-20 06:19:52', '2018-10-20 06:19:52'),
+(4, 3, 'closed', NULL, NULL, NULL, NULL, 'cash', 0.00, '2018-10-31 03:44:05', '2018-10-31 03:44:05'),
+(5, 4, 'closed', NULL, NULL, NULL, NULL, 'cash', 0.00, '2018-10-31 05:03:50', '2018-10-31 05:03:50'),
+(6, 5, 'closed', NULL, NULL, NULL, NULL, 'cash', 0.00, '2018-11-03 03:35:26', '2018-11-03 03:35:26'),
+(7, 3, 'closed', NULL, NULL, NULL, NULL, 'cash', 0.00, '2018-11-04 06:07:15', '2018-11-04 06:07:15');
 
 -- --------------------------------------------------------
 
@@ -51,6 +64,19 @@ CREATE TABLE `cart_items` (
   `item_id` int(11) NOT NULL,
   `quantity` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cart_items`
+--
+
+INSERT INTO `cart_items` (`cart_id`, `item_id`, `quantity`) VALUES
+(3, 1, 5),
+(3, 2, 8),
+(4, 1, 3),
+(5, 1, 2),
+(5, 2, 3),
+(6, 1, 2),
+(7, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -80,6 +106,27 @@ INSERT INTO `category` (`id`, `category_name`, `created_at`, `updated_at`) VALUE
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contact_form`
+--
+
+CREATE TABLE `contact_form` (
+  `Id` int(11) NOT NULL,
+  `Name` text NOT NULL,
+  `LastName` text NOT NULL,
+  `Email` varchar(100) NOT NULL,
+  `Message` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `contact_form`
+--
+
+INSERT INTO `contact_form` (`Id`, `Name`, `LastName`, `Email`, `Message`) VALUES
+(1, 'atul', 'satewal', 'atulsatewal@gmail.com', 'great website');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `items`
 --
 
@@ -91,6 +138,7 @@ CREATE TABLE `items` (
   `isbn` bigint(14) NOT NULL,
   `author` varchar(50) NOT NULL,
   `price` float(10,2) NOT NULL,
+  `old_price` float(10,2) NOT NULL,
   `img_url` text NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -100,9 +148,9 @@ CREATE TABLE `items` (
 -- Dumping data for table `items`
 --
 
-INSERT INTO `items` (`id`, `category_id`, `name`, `description`, `isbn`, `author`, `price`, `img_url`, `created_at`, `updated_at`) VALUES
-(1, 1, 'The Girl on The Train', 'The Girl on the Train is a psychological thriller novel by British author Paula Hawkins. The novel debuted at No. 1 on The New York Times Fiction Best Sellers of 2015 list dated 1 February 2015, and r', 1234567890123, 'Vikas Mahato', 420.55, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH_CatVX7NY2BsHpS7Gc_CfOYn1qyUfHe8VcfaG9ir9AnL', '2018-10-19 06:12:11', '2018-10-19 17:58:27'),
-(2, 1, 'Lethal White (Cormoran Strike 4)', 'I seen a kid killed â€¦ He strangled it, up by the horse.â€™  When Billy, a troubled young man, comes to private eye Cormoran Strike\'s office to ask for his help investigating a crime he thinks he witnessed as a child, Strike is left deeply unsettled. While Billy is obviously mentally distressed and cannot remember many concrete details, there is something sincere about him and his story. But before Strike can question him further, Billy bolts from his office in a panic. Trying to get to the bottom of Billy\'s story, Strike and Robin Ellacott - once his assistant, now a partner in the agency - set off on a twisting trail that leads them through the backstreets of London, into a secretive inner sanctum within Parliament and to a beautiful but sinister manor house deep in the countryside. And during this labyrinthine investigation, Strike\'s own life is far from straightforward: His newfound fame as a private eye means he can no longer operate behind the scenes as he once did. Plus, his relationship with his former a', 545010225, 'J. K. Rowling', 700.45, 'https://www.dubraybooks.ie/content/images/thumbs/025/0256120_lethal-white-cormoran-strike-boook-4_300.jpeg', '2018-10-20 03:18:30', '2018-10-20 03:23:21');
+INSERT INTO `items` (`id`, `category_id`, `name`, `description`, `isbn`, `author`, `price`, `old_price`, `img_url`, `created_at`, `updated_at`) VALUES
+(1, 1, 'The Girl on The Train', 'The Girl on the Train is a psychological thriller novel by British author Paula Hawkins. The novel debuted at No. 1 on The New York Times Fiction Best Sellers of 2015 list dated 1 February 2015, and r', 1234567890123, 'Vikas Mahato', 420.55, 530.00, 'images/product_1.jpg', '2018-10-19 06:12:11', '2018-11-03 17:43:30'),
+(2, 5, 'Harry Potter', 'An 11 year old bo discovers that he is one of the greatest wizards of all time.', 3123678567890, 'J. K. Rowling', 450.00, 600.00, 'images/philostone.jpeg', '2018-10-20 04:37:35', '2018-10-20 04:37:35');
 
 -- --------------------------------------------------------
 
@@ -112,7 +160,7 @@ INSERT INTO `items` (`id`, `category_id`, `name`, `description`, `isbn`, `author
 
 CREATE TABLE `members` (
   `id` int(10) NOT NULL,
-  `username` varchar(10) NOT NULL,
+  `username` varchar(30) NOT NULL,
   `email` varchar(50) NOT NULL,
   `role` enum('user','admin','','') NOT NULL DEFAULT 'user',
   `password` varchar(512) NOT NULL,
@@ -126,18 +174,42 @@ CREATE TABLE `members` (
 --
 
 INSERT INTO `members` (`id`, `username`, `email`, `role`, `password`, `salt`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@email.com', 'admin', 'c9a99b985b1e871541f20a3f7f6bd8154fa3d2407fb9e3fdc626af5f9a118c150537299b15c5635555062906b0f42984843146cbbb3b06736762991ab0e69cc3', 'dd183b390e0b0cca6d3a6d3ba39226f073806845e15361797aaa5ac52c76840e4998fe6301e46b3950777e2a8a5e0102ae19e830297fbd2a94d5c468451d1167', '2018-10-19 05:57:46', '2018-10-19 05:57:46');
+(1, 'admin', 'admin@email.com', 'admin', 'c9a99b985b1e871541f20a3f7f6bd8154fa3d2407fb9e3fdc626af5f9a118c150537299b15c5635555062906b0f42984843146cbbb3b06736762991ab0e69cc3', 'dd183b390e0b0cca6d3a6d3ba39226f073806845e15361797aaa5ac52c76840e4998fe6301e46b3950777e2a8a5e0102ae19e830297fbd2a94d5c468451d1167', '2018-10-19 05:57:46', '2018-10-19 05:57:46'),
+(2, 'user', 'user@email.com', 'user', 'eefd49d4f844f752caf0686ba00fcc711e34c8531aeb59eb73228f4ede911077362b9b0fe5f84195ad18c46a38dcb0815b0f3952fbe2d0deac3849b112716260', '7247444c04ed8658f2213abc97c58ee966b2bb3a3eaf25915921b79a369bb3db843c0aca1aeff31a3fc18cf357db7f883cef52305b59f9dfeb7156e65af1e6f3', '2018-10-20 04:38:42', '2018-10-20 04:38:42'),
+(3, 'atulsatewal', 'atulsatewal@gmail.com', 'user', '5902602db3ebd57531b118133b79caebc04cf750e11396994dfc422980f360d1836ff040d7eb1cc4574c1288439af63596b47e86c53cb07573e3f82580bbc85e', 'dd0fd28359a296d1fbf1cfc3de4dd75672cc02965e735a3d44f12fcc7d3388f279b928ae5f5ad61c1812f7b2ae538465b6c66d03f7a4d7ff423298e40dfc82ef', '2018-10-31 03:43:42', '2018-10-31 03:43:42'),
+(4, 'vishal', 'vishal@gmail.com', 'user', 'be2f60b3418e5c03df19f0427c0ac8ce790eecfd66939e070a2c5284adbdd1fb92e28488548fb37a86b93cfd0c5ba440d4bbe0ae6d0f0a1d03d8875bc1fa62e0', '030475f6d9a809ffb1173c60c9a1a496fc9d2c9067f28ff785899f8d5afa1fee7754f7c62752e4c1e879406bb8bce9d9a514c51699958c2b670237b9a72ceb74', '2018-10-31 05:03:28', '2018-10-31 05:03:28'),
+(5, 'renu', 'renu@gmail.com', 'user', '1ab282d547332aa6555edcf7d2064e7b5779e78ffcd0040aea560a7c9b42373fe726dbc3c6cc7f3e9036d9ad89e22fe765a114debd54cda80df6c60c0c423cd4', '9fe7dff2424b9fc34974703028b53bb01dd998eb41d90f973ffa3a1dcdc913fe0e561d5b4fa03781d408dfdea9cc33e0a9f3dcc5dc3126cf3d88e9076876e2eb', '2018-11-03 03:34:26', '2018-11-03 03:34:26');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_cart`
+-- Table structure for table `orders`
 --
 
-CREATE TABLE `user_cart` (
-  `user_id` int(11) NOT NULL,
-  `cart_id` int(11) NOT NULL
+CREATE TABLE `orders` (
+  `order_ID` int(11) NOT NULL,
+  `cart_id` int(10) NOT NULL,
+  `name` text NOT NULL,
+  `country` text NOT NULL,
+  `addressLine1` text NOT NULL,
+  `addressLine2` text NOT NULL,
+  `zipCode` int(6) NOT NULL,
+  `city` text NOT NULL,
+  `phoneNo` bigint(10) NOT NULL,
+  `paymentMethod` enum('cash','credit cart') NOT NULL DEFAULT 'cash',
+  `email` varchar(300) NOT NULL,
+  `status` enum('N','R','F','D','C') NOT NULL DEFAULT 'N'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`order_ID`, `cart_id`, `name`, `country`, `addressLine1`, `addressLine2`, `zipCode`, `city`, `phoneNo`, `paymentMethod`, `email`, `status`) VALUES
+(1, 3, 'user', 'India', 'j103/1 gautam nagar', 'new delhi', 110049, 'City', 9910597341, 'cash', 'user@email.com', 'N'),
+(2, 4, 'atulsatewal', 'India', 'j103/1 gautam nagar', 'new delhi', 110049, 'City', 9910597341, 'cash', 'atulsatewal@gmail.co', 'C'),
+(3, 5, 'vishal', 'India', 'j103/1 gautam nagar', 'new delhi', 110049, 'City', 9910597341, 'cash', 'vishal@gmail.com', 'N'),
+(4, 6, 'renu', 'India', 'd5/1 3rd floor ', 'chennai', 110047, 'City', 7894512342, 'cash', 'renu@gmail.com', 'N');
 
 --
 -- Indexes for dumped tables
@@ -163,6 +235,12 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `contact_form`
+--
+ALTER TABLE `contact_form`
+  ADD PRIMARY KEY (`Id`);
+
+--
 -- Indexes for table `items`
 --
 ALTER TABLE `items`
@@ -176,11 +254,10 @@ ALTER TABLE `members`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user_cart`
+-- Indexes for table `orders`
 --
-ALTER TABLE `user_cart`
-  ADD PRIMARY KEY (`user_id`,`cart_id`),
-  ADD KEY `cart_id` (`cart_id`);
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`order_ID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -190,13 +267,19 @@ ALTER TABLE `user_cart`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `contact_form`
+--
+ALTER TABLE `contact_form`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `items`
@@ -208,7 +291,13 @@ ALTER TABLE `items`
 -- AUTO_INCREMENT for table `members`
 --
 ALTER TABLE `members`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `order_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
@@ -226,13 +315,6 @@ ALTER TABLE `cart_items`
 --
 ALTER TABLE `items`
   ADD CONSTRAINT `items_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`);
-
---
--- Constraints for table `user_cart`
---
-ALTER TABLE `user_cart`
-  ADD CONSTRAINT `user_cart_ibfk_1` FOREIGN KEY (`cart_id`) REFERENCES `cart` (`id`),
-  ADD CONSTRAINT `user_cart_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `members` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

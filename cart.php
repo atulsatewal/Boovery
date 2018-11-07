@@ -245,7 +245,7 @@ sec_session_start();
 						<!-- Name -->
 						<div class="cart_item_product d-flex flex-row align-items-center justify-content-start">
 							<div class="cart_item_image">
-								<div><img src="images/cart_1.jpg" alt=""></div>
+								<div><img src="<?php echo $img_url; ?>" alt=""></div>
 							</div>
 							<div class="cart_item_name_container">
 								<div class="cart_item_name"><a href="#"><?php echo $name;?></a></div>

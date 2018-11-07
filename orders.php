@@ -44,12 +44,12 @@
                             </thead>
                             <tbody>
                             <?php
-                            $sql = "SELECT `cart_id`, `name`, `country`, `city`, `phoneNo`, `status` FROM `orders`";
+                            $sql = "SELECT orders.cart_id, orders.name, orders.country, orders.city, orders.phoneNo, orders.status, cart.id FROM  orders, cart WHERE orders.cart_id=cart.id";
 
                             if($stmt1 = $mysqli->prepare($sql)){
                                 $stmt1->execute();
                                 $stmt1->store_result();
-                                $stmt1->bind_result( $id, $name, $country, $city, $phoneNo , $status);
+                                $stmt1->bind_result( $id, $name, $country, $city, $phoneNo , $status, $id);
 
                             }else if(DEBUG) echo $mysqli->error();
 

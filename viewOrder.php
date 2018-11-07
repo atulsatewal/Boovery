@@ -36,7 +36,7 @@
                     $stmt1->bind_param('s', $_GET['id']);
                     $stmt1->execute();
                     $stmt1->store_result();
-                    $stmt1->bind_result( $cart_id, $name, $country, $addressLine1, $addressLine2, $zipCode, $city, $phoneNo, $payementMethod, $status );
+                    $stmt1->bind_result(  $order_ID, $cart_id, $name, $country, $addressLine1, $addressLine2, $zipCode, $city, $phoneNo, $payementMethod,  $email, $status );
 
                 }else echo mysqli_error($mysqli);
 

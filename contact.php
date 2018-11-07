@@ -27,10 +27,10 @@
 							<nav class="main_nav">
 								<ul>
 									<li class="hassubs active">
-										<a href="index.html">Home</a>
+										<a href="dashboard_user.php">Home</a>
 										<ul>
 											<li><a href="categories.php">Categories</a></li>
-											<li><a href="product.html">Product</a></li>
+											<li><a href="product.php">Product</a></li>
 											<li><a href="cart.php">Cart</a></li>
 											<li><a href="checkout.php">Check out</a></li>
 											<li><a href="contact.php">Contact</a></li>
@@ -46,8 +46,6 @@
 											<li><a href="categories.php">Category</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Accessories</a></li>
-									<li><a href="#">Offers</a></li>
 									<li><a href="contact.php">Contact</a></li>
 								</ul>
 							</nav>
@@ -135,7 +133,7 @@
 				</div>
 				<ul class="page_menu_nav menu_mm">
 					<li class="page_menu_item has-children menu_mm">
-						<a href="index.html">Home<i class="fa fa-angle-down"></i></a>
+						<a href="dashboard_user.php">Home<i class="fa fa-angle-down"></i></a>
 						<ul class="page_menu_selection menu_mm">
 							<li class="page_menu_item menu_mm"><a href="categories.php">Categories<i class="fa fa-angle-down"></i></a></li>
 							<li class="page_menu_item menu_mm"><a href="product.html">Product<i class="fa fa-angle-down"></i></a></li>
@@ -184,7 +182,7 @@
 							<div class="home_content">
 								<div class="breadcrumbs">
 									<ul>
-										<li><a href="index.html">Home</a></li>
+										<li><a href="dashboard_user.php">Home</a></li>
 										<li>Contact</li>
 									</ul>
 								</div>
@@ -208,27 +206,27 @@
 						<div class="section_title">Get in Touch</div>
 						<div class="section_subtitle">Say hello</div>
 						<div class="contact_form_container">
-							<form action="#" id="contact_form" class="contact_form">
+							<form action="app_functions/submitcontact.php" id="contact_form" class="contact_form" method="post">
 								<div class="row">
 									<div class="col-xl-6">
 										<!-- Name -->
 										<label for="contact_name">First Name*</label>
-										<input type="text" id="contact_name" class="contact_input" required="required">
+										<input type="text" id="contact_name" class="contact_input" name="Name" required="required">
 									</div>
 									<div class="col-xl-6 last_name_col">
 										<!-- Last Name -->
 										<label for="contact_last_name">Last Name*</label>
-										<input type="text" id="contact_last_name" class="contact_input" required="required">
+										<input type="text" id="contact_last_name" class="contact_input" name="LastName"required="required">
 									</div>
 								</div>
 								<div>
 									<!-- Subject -->
-									<label for="contact_company">Subject</label>
-									<input type="text" id="contact_company" class="contact_input">
+									<label for="contact_company">Email</label>
+									<input type="Email" id="contact_company" class="contact_input" name="Email">
 								</div>
 								<div>
 									<label for="contact_textarea">Message*</label>
-									<textarea id="contact_textarea" class="contact_input contact_textarea" required="required"></textarea>
+									<textarea id="contact_textarea" class="contact_input contact_textarea" required="required" name="Message"></textarea>
 								</div>
 								<button class="button contact_button"><span>Send Message</span></button>
 							</form>
@@ -270,7 +268,10 @@
 					<div class="map">
 						<div id="google_map" class="google_map">
 							<div class="map_container">
-								<div id="map"></div>
+								<div id="map">
+                                <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6239.172168252695!2d77.23916117975132!3d28.641235664791164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd209d24a4d5%3A0xc45c2019c27daaef!2sBig+Book+Bazar!5e0!3m2!1sen!2sin!4v1541580014185" width="950" height="700" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                    </p>
+                                </div>
 							</div>
 						</div>
 					</div>
@@ -317,7 +318,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/greensock/animation.gsap.min.js"></script>
 <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
 <script src="plugins/easing/easing.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
 <script src="js/contact.js"></script>
 </body>
 </html>
