@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 07, 2018 at 10:14 AM
--- Server version: 10.1.34-MariaDB
--- PHP Version: 7.2.7
+-- Host: localhost
+-- Generation Time: Nov 07, 2018 at 01:15 PM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.1.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -51,7 +51,9 @@ INSERT INTO `cart` (`id`, `user_id`, `status`, `delivery_address`, `city`, `pinc
 (4, 3, 'closed', NULL, NULL, NULL, NULL, 'cash', 0.00, '2018-10-31 03:44:05', '2018-10-31 03:44:05'),
 (5, 4, 'closed', NULL, NULL, NULL, NULL, 'cash', 0.00, '2018-10-31 05:03:50', '2018-10-31 05:03:50'),
 (6, 5, 'closed', NULL, NULL, NULL, NULL, 'cash', 0.00, '2018-11-03 03:35:26', '2018-11-03 03:35:26'),
-(7, 3, 'closed', NULL, NULL, NULL, NULL, 'cash', 0.00, '2018-11-04 06:07:15', '2018-11-04 06:07:15');
+(7, 3, 'closed', NULL, NULL, NULL, NULL, 'cash', 0.00, '2018-11-04 06:07:15', '2018-11-04 06:07:15'),
+(8, 2, 'closed', NULL, NULL, NULL, NULL, 'cash', 0.00, '2018-11-07 11:38:29', '2018-11-07 11:38:29'),
+(9, 2, 'open', NULL, NULL, NULL, NULL, 'cash', 0.00, '2018-11-07 12:04:38', '2018-11-07 12:04:38');
 
 -- --------------------------------------------------------
 
@@ -76,7 +78,9 @@ INSERT INTO `cart_items` (`cart_id`, `item_id`, `quantity`) VALUES
 (5, 1, 2),
 (5, 2, 3),
 (6, 1, 2),
-(7, 1, 1);
+(7, 1, 1),
+(8, 1, 1),
+(8, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -140,6 +144,7 @@ CREATE TABLE `items` (
   `price` float(10,2) NOT NULL,
   `old_price` float(10,2) NOT NULL,
   `img_url` text NOT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT '1',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -148,9 +153,10 @@ CREATE TABLE `items` (
 -- Dumping data for table `items`
 --
 
-INSERT INTO `items` (`id`, `category_id`, `name`, `description`, `isbn`, `author`, `price`, `old_price`, `img_url`, `created_at`, `updated_at`) VALUES
-(1, 1, 'The Girl on The Train', 'The Girl on the Train is a psychological thriller novel by British author Paula Hawkins. The novel debuted at No. 1 on The New York Times Fiction Best Sellers of 2015 list dated 1 February 2015, and r', 1234567890123, 'Vikas Mahato', 420.55, 530.00, 'images/product_1.jpg', '2018-10-19 06:12:11', '2018-11-03 17:43:30'),
-(2, 5, 'Harry Potter', 'An 11 year old bo discovers that he is one of the greatest wizards of all time.', 3123678567890, 'J. K. Rowling', 450.00, 600.00, 'images/philostone.jpeg', '2018-10-20 04:37:35', '2018-10-20 04:37:35');
+INSERT INTO `items` (`id`, `category_id`, `name`, `description`, `isbn`, `author`, `price`, `old_price`, `img_url`, `active`, `created_at`, `updated_at`) VALUES
+(1, 1, 'The Girl on The Train', 'The Girl on the Train is a psychological thriller novel by British author Paula Hawkins. The novel debuted at No. 1 on The New York Times Fiction Best Sellers of 2015 list dated 1 February 2015, and r', 1234567890123, 'Vikas Mahato', 420.55, 530.00, 'images/product_1.jpg', 1, '2018-10-19 06:12:11', '2018-11-03 17:43:30'),
+(2, 5, 'Harry Potter', 'An 11 year old bo discovers that he is one of the greatest wizards of all time.', 3123678567890, 'J. K. Rowling', 450.00, 600.00, 'images/philostone.jpeg', 1, '2018-10-20 04:37:35', '2018-10-20 04:37:35'),
+(3, 1, 'Sherlock Holmes', 'A high functioning sociopath solves crime and mystery.', 123123123111, 'Sir Arthor Conan Doyle', 2344.00, 0.00, 'https://duckduckgo.com/i/9ad73b4c.jpg', 1, '2018-11-07 11:18:52', '2018-11-07 11:18:52');
 
 -- --------------------------------------------------------
 
@@ -209,7 +215,8 @@ INSERT INTO `orders` (`order_ID`, `cart_id`, `name`, `country`, `addressLine1`, 
 (1, 3, 'user', 'India', 'j103/1 gautam nagar', 'new delhi', 110049, 'City', 9910597341, 'cash', 'user@email.com', 'N'),
 (2, 4, 'atulsatewal', 'India', 'j103/1 gautam nagar', 'new delhi', 110049, 'City', 9910597341, 'cash', 'atulsatewal@gmail.co', 'C'),
 (3, 5, 'vishal', 'India', 'j103/1 gautam nagar', 'new delhi', 110049, 'City', 9910597341, 'cash', 'vishal@gmail.com', 'N'),
-(4, 6, 'renu', 'India', 'd5/1 3rd floor ', 'chennai', 110047, 'City', 7894512342, 'cash', 'renu@gmail.com', 'N');
+(4, 6, 'renu', 'India', 'd5/1 3rd floor ', 'chennai', 110047, 'City', 7894512342, 'cash', 'renu@gmail.com', 'N'),
+(5, 8, 'user', 'India', 'D-8', 'Gulmohar Park', 110049, 'City', 9650043051, 'cash', 'user@email.com', 'N');
 
 --
 -- Indexes for dumped tables
@@ -267,7 +274,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -285,7 +292,7 @@ ALTER TABLE `contact_form`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `members`
@@ -297,7 +304,7 @@ ALTER TABLE `members`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `order_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
