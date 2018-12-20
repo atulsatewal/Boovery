@@ -38,6 +38,7 @@
 
                                 <li><a href="contact.php">Contact</a></li>
                                 <li><a href="user_orders.php">Your orders</a></li>
+                                <li><a href="profilecard.php">Profile</a></li>
                                 <li><a href="logout.php">Logout</a></li>
                             </ul>
                         </nav>
@@ -125,27 +126,40 @@
             </div>
             <ul class="page_menu_nav menu_mm">
                 <li class="page_menu_item has-children menu_mm">
-                    <a href="dashboard_user.php">Home<i class="fa fa-angle-down"></i></a>
-                    <ul class="page_menu_selection menu_mm">
-                        <li class="page_menu_item menu_mm"><a href="categories.php">Categories<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="product.html">Product<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="cart.php">Cart<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="checkout.php">Checkout<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="contact.php">Contact<i class="fa fa-angle-down"></i></a></li>
-                    </ul>
-                </li>
+                    <a href="dashboard_user.php">Home</a>
+                    </li>
                 <li class="page_menu_item has-children menu_mm">
                     <a href="categories.php">Categories<i class="fa fa-angle-down"></i></a>
                     <ul class="page_menu_selection menu_mm">
-                        <li class="page_menu_item menu_mm"><a href="categories.php">Category<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="categories.php">Category<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="categories.php">Category<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="categories.php">Category<i class="fa fa-angle-down"></i></a></li>
+
+                                        <?php
+                                        $sql = "SELECT id, category_name FROM category";
+
+                                        if($stmt1 = $mysqli->prepare($sql)){
+                                            $stmt1->execute();
+                                            $stmt1->store_result();
+                                            $stmt1->bind_result($id, $category_name);
+
+                                        }else if(DEBUG) echo $mysqli->error();
+
+                                        while($stmt1->fetch())
+                                        {
+                                            ?>
+
+                                            <li class="page_menu_item menu_mm"><a href="categories.php?id=<?php echo $id; ?>"><?php echo $category_name; ?></a></li>
+                                            <?php
+                                        }
+                                        ?>
+            
+            
+                
+                
                     </ul>
                 </li>
-                <li class="page_menu_item menu_mm"><a href="index.html">Accessories<i class="fa fa-angle-down"></i></a></li>
-                <li class="page_menu_item menu_mm"><a href="#">Offers<i class="fa fa-angle-down"></i></a></li>
-                <li class="page_menu_item menu_mm"><a href="contact.php">Contact<i class="fa fa-angle-down"></i></a></li>
+                <li class="page_menu_item menu_mm"><a href="contact.php">Contact</a></li>
+                <li class="page_menu_item menu_mm"><a href="user_orders.php">Orders</a></li>
+                <li class="page_menu_item menu_mm"><a href="profilecard.php">Profile</a></li>
+                <li class="page_menu_item menu_mm"><a href="logout.php">logout</a></li>
             </ul>
         </div>
     </div>

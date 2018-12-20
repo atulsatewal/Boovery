@@ -103,5 +103,5 @@ catch ( Exception $e ) {
 
     echo "GADBAD<br>";
 }
-header("location:../dashboard_user.php");
+header("Refresh:05; url=thankyou.php");
 ?>

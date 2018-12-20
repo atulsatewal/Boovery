@@ -37,9 +37,9 @@
 							<div class="row">
 								<div class="col">
 									<div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
-										<div class="home_slider_title">A NEW ONLINE BOOOK STORE </div>
-										<div class="home_slider_subtitle">WHERE BOOOKS ARE OFFERD FOR SALE </div>
-										<div class="button button_light home_button"><a href="#">Buy Now</a></div>
+										<div class="home_slider_title">A NEW ONLINE BOOK STORE </div>
+										<div class="home_slider_subtitle">WHERE BOOKS ARE OFFERD FOR SALE </div>
+										<div class="button button_light home_button"><a href="dashboard_user.php">Buy Now</a></div>
 									</div>
 								</div>
 							</div>
@@ -57,7 +57,7 @@
 									<div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
 										<div class="home_slider_title" >A new Online Shop experience.</div>
 										<div class="home_slider_subtitle">"We see our customers as invited guests to a party, and we are the hosts. It's our job to make the customer experience a little bit better."</div>
-										<div class="button button_light home_button"><a href="#">Shop Now</a></div>
+										<div class="button button_light home_button"><a href="dashboard_user.php">Shop Now</a></div>
 									</div>
 								</div>
 							</div>
@@ -75,7 +75,7 @@
 									<div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
 										<div class="home_slider_title" class="text-dark">STAY IN TOUCH SOMTHING BETTER IS COMMING SOON ..</div>
 										<div class="home_slider_subtitle">Introducing R-Tablet for E-BOOKS</div>
-										<div class="button button_light home_button"><a href="#">COMMING SOON....</a></div>
+										<div class="button button_light home_button"><a href="dashboard_user.php">COMMING SOON....</a></div>
 									</div>
 								</div>
 							</div>

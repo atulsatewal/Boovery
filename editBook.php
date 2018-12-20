@@ -35,10 +35,18 @@
 
 <?php
 
-    }
-
+    }else{
     ?>
 
+<div class="alert alert-info alert-dismissible">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>info!</strong> change your information and press submit to update 
+        </div>
+<?php
+        
+    }?>
+      
+<div class="container-fluid">
     <!-- Main content -->
     <section class="content">
       <!-- Info boxes -->
@@ -60,7 +68,7 @@
                     $stmt1->bind_param('s', $_GET['id']);
                     $stmt1->execute();
                     $stmt1->store_result();
-                    $stmt1->bind_result( $id, $category_id,  $name, $description, $isbn, $author, $price, $old_price, $img_url, $created_at, $updated_at );
+                    $stmt1->bind_result( $id, $category_id,  $name, $description, $isbn, $author, $price, $old_price, $img_url, $created_at, $updated_at,$active);
 
                 }else if(DEBUG) echo $mysqli->error();
 
@@ -68,39 +76,45 @@
                 {
             ?>
               
-            <form action="app_functions/createOrUpdateBook.php" method="post">
+            <form action="app_functions/createOrUpdateBook.php" method="post" autocomplete="off">
 
               <input type="hidden" name = "id" value = "<?php echo $id; ?>"/>
 
               <input type="hidden" name = "type" value = "update"/>
               <div class="form-group">
       <label for="name">Name:</label>
-      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" value="<?php echo $name; ?>">
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" value="<?php echo $name; ?>" required>
     </div>
 
     <div class="form-group">
       <label for="description">Description:</label>
-      <input type="text" class="form-control" id="description" placeholder="Enter description" name="description" value="<?php echo $description; ?>">
+      <input type="text" class="form-control" id="description" placeholder="Enter description" name="description" value="<?php echo $description; ?>" required>
     </div>
 
     <div class="form-group">
       <label for="isbn">ISBN:</label>
-      <input type="number" class="form-control" id="isbn" placeholder="Enter isbn" name="isbn" value="<?php echo $isbn; ?>">
+      <input type="number" class="form-control" id="isbn" placeholder="Enter isbn" name="isbn" value="<?php echo $isbn; ?>" required>
     </div>
 
     <div class="form-group">
       <label for="author">Author:</label>
-      <input type="text" class="form-control" id="author" placeholder="Enter author" name="author" value="<?php echo $author; ?>">
+      <input type="text" class="form-control" id="author" placeholder="Enter author" name="author" value="<?php echo $author; ?>" required>
     </div>
 
     <div class="form-group">
       <label for="price">Price:</label>
-      <input type="text" class="form-control" id="price" placeholder="Enter price" name="price" value="<?php echo $price; ?>">
+      <input type="text" class="form-control" id="price" placeholder="Enter price" name="price" value="<?php echo $price; ?>" required>
     </div>
+                
 
     <div class="form-group">
-      <label for="img_url">Image URL:</label>
-      <input type="text" class="form-control" id="img_url" placeholder="Enter img_url" name="img_url" value="<?php echo $img_url; ?>">
+      <label for="price">oldPrice:</label>
+      <input type="text" class="form-control" id="old_price" placeholder="Enter price" name="old_price" value="<?php echo $old_price; ?>" required>
+    </div>
+                
+    <div class="form-group">
+      <label for="img_url">Image URL:(images/yourfilename.jpg)</label>
+      <input type="text" class="form-control" id="img_url" placeholder="Enter img_url" name="img_url" value="<?php echo $img_url; ?>" required>
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
@@ -129,4 +143,5 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+</div>
 <?php include ("includes/footer.php"); ?>

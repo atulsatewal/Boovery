@@ -13,7 +13,7 @@
             <li class="active">All Orders</li>
         </ol>
     </section>
-
+<div class="container-fluid">
     <!-- Main content -->
     <section class="content">
         <!-- Info boxes -->
@@ -104,10 +104,12 @@
                             </tbody>
                             <tfoot>
                             <tr>
-                                <th>Status</th>
+                               <th>Status</th>
                                 <th>Name</th>
-                                <th>Date</th>
-                                <th>Details</th>
+                                <th>Country</th>
+                                <th>City</th>
+                                <th>Phone Number</th>
+                                <th>View</th>
                             </tr>
                             </tfoot>
                         </table>
@@ -124,4 +126,5 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+</div>
 <?php include ("includes/footer.php"); ?>

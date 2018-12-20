@@ -29,14 +29,14 @@ sec_session_start();
 
     <div class="home">
         <div class="home_container">
-            <div class="home_background" style="background-image:url(images/categories.jpg)"></div>
+            <div class="home_background" style="background-image:url(images/yo.jpg)"></div>
             <div class="home_content_container">
                 <div class="container">
                     <div class="row">
                         <div class="col">
                             <div class="home_content">
-                                <div class="home_title">Smart Phones<span>.</span></div>
-                                <div class="home_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</p></div>
+                                <div class="home_title">Your orders<span>.</span></div>
+                                <div class="home_text"><p>order history below</p></div>
                             </div>
                         </div>
                     </div>
@@ -57,9 +57,10 @@ sec_session_start();
                 <div class="col">
 
                     <div>
-
-                        <table class="table">
-                            <thead>
+                        <br>
+<h1 class="bg-info text-white">YOUR ORDER TABLE</h1>
+                    <table class="table" border="1">
+                            <thead class="thead-dark">
                             <th>Order id</th>
                             <th>Status</th>
                             <th>Name</th>
@@ -144,74 +145,52 @@ sec_session_start();
 
     <!-- Icon Boxes -->
 
-    <div class="icon_boxes">
-        <div class="container">
-            <div class="row icon_box_row">
+  
+	<div class="icon_boxes">
+		<div class="container">
+			<div class="row icon_box_row">
+				
+				<!-- Icon Box -->
+				<div class="col-lg-4 icon_box_col">
+					<div class="icon_box">
+						<div class="icon_box_image"><img src="images/icon_1.svg" alt=""></div>
+						<div class="icon_box_title">Free Shipping </div>
+						<div class="icon_box_text">
+							<p>We are currently providings free shipping over 60 countries.</p>
+						</div>
+					</div>
+				</div>
 
-                <!-- Icon Box -->
-                <div class="col-lg-4 icon_box_col">
-                    <div class="icon_box">
-                        <div class="icon_box_image"><img src="images/icon_1.svg" alt=""></div>
-                        <div class="icon_box_title">Free Shipping Worldwide</div>
-                        <div class="icon_box_text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie.</p>
-                        </div>
-                    </div>
-                </div>
+				<!-- Icon Box -->
+				<div class="col-lg-4 icon_box_col">
+					<div class="icon_box">
+						<div class="icon_box_image"><img src="images/icon_2.svg" alt=""></div>
+						<div class="icon_box_title">Free Returns</div>
+						<div class="icon_box_text">
+							<p>We provide the best return polices to our customers.</p>
+						</div>
+					</div>
+				</div>
 
-                <!-- Icon Box -->
-                <div class="col-lg-4 icon_box_col">
-                    <div class="icon_box">
-                        <div class="icon_box_image"><img src="images/icon_2.svg" alt=""></div>
-                        <div class="icon_box_title">Free Returns</div>
-                        <div class="icon_box_text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie.</p>
-                        </div>
-                    </div>
-                </div>
+				<!-- Icon Box -->
+				<div class="col-lg-4 icon_box_col">
+					<div class="icon_box">
+						<div class="icon_box_image"><img src="images/icon_3.svg" alt=""></div>
+						<div class="icon_box_title">24h Fast Support</div>
+						<div class="icon_box_text">
+							<p>We have 1000+ emoployes working in different countries to remove the barires and providing efficient relationship with our customres.</p>
+						</div>
+					</div>
+				</div>
 
-                <!-- Icon Box -->
-                <div class="col-lg-4 icon_box_col">
-                    <div class="icon_box">
-                        <div class="icon_box_image"><img src="images/icon_3.svg" alt=""></div>
-                        <div class="icon_box_title">24h Fast Support</div>
-                        <div class="icon_box_text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie.</p>
-                        </div>
-                    </div>
-                </div>
+			</div>
+		</div>
+	</div>
 
-            </div>
-        </div>
-    </div>
 
     <!-- Newsletter -->
 
-    <div class="newsletter">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="newsletter_border"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="newsletter_content text-center">
-                        <div class="newsletter_title">Subscribe to our newsletter</div>
-                        <div class="newsletter_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros</p></div>
-                        <div class="newsletter_form_container">
-                            <form action="#" id="newsletter_form" class="newsletter_form">
-                                <input type="email" class="newsletter_input" required="required">
-                                <button class="newsletter_button trans_200"><span>Subscribe</span></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
+    
 
     <div class="footer_overlay"></div>
     <footer class="footer">

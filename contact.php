@@ -91,22 +91,22 @@ sec_session_start();
 						<div class="contact_info_section">
 							<div class="contact_info_title">Marketing</div>
 							<ul>
-								<li>Phone: <span>+53 345 7953 3245</span></li>
-								<li>Email: <span>yourmail@gmail.com</span></li>
+								<li>Phone: <span>+011 85459875</span></li>
+								<li>Email: <span>boovery@gmail.com</span></li>
 							</ul>
 						</div>
 						<div class="contact_info_section">
 							<div class="contact_info_title">Shippiing & Returns</div>
 							<ul>
-								<li>Phone: <span>+53 345 7953 3245</span></li>
-								<li>Email: <span>yourmail@gmail.com</span></li>
+								<li>Phone: <span>+011 7953 3245</span></li>
+								<li>Email: <span>booveryhelp@gmail.com</span></li>
 							</ul>
 						</div>
 						<div class="contact_info_section">
 							<div class="contact_info_title">Information</div>
 							<ul>
-								<li>Phone: <span>+53 345 7953 3245</span></li>
-								<li>Email: <span>yourmail@gmail.com</span></li>
+								<li>Phone: <span>+011 7953 3245</span></li>
+								<li>Email: <span>booveryinquirey@gmail.com</span></li>
 							</ul>
 						</div>
 					</div>
@@ -141,9 +141,9 @@ sec_session_start();
 			<div class="row">
 				<div class="col">
 					<div class="footer_content d-flex flex-lg-row flex-column align-items-center justify-content-lg-start justify-content-center">
-						<div class="footer_logo"><a href="#">Sublime.</a></div>
+						<div class="footer_logo"><a href="#">Boovery.com</a></div>
 						<div class="copyright ml-auto mr-auto"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |<i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="" target="_blank">boovery.com</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 						<div class="footer_social ml-lg-auto">
 							<ul>

@@ -6,11 +6,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Dashboard
+        Create book
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Dashboard</li>
+        <li class="active">Create book</li>
       </ol>
     </section>
 
@@ -38,7 +38,7 @@
     }
 
     ?>
-
+<div class="container-fluid">
     <!-- Main content -->
     <section class="content">
       <!-- Info boxes -->
@@ -73,12 +73,12 @@
               <input type="hidden" name = "type" value = "create"/>
               <div class="form-group">
       <label for="name">Name:</label>
-      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
     </div>
 
     <div class="form-group">
   <label for="sel1">Select list:</label>
-  <select class="form-control" id="catogory" name="category_id">
+  <select class="form-control" id="catogory" name="category_id" required>
     <?php 
       while($stmt1->fetch()){
       ?>
@@ -94,27 +94,32 @@
 
     <div class="form-group">
       <label for="description">Description:</label>
-      <input type="text" class="form-control" id="description" placeholder="Enter description" name="description">
+      <input type="text" class="form-control" id="description" placeholder="Enter description" name="description" required>
     </div>
 
     <div class="form-group">
       <label for="isbn">ISBN:</label>
-      <input type="number" class="form-control" id="isbn" placeholder="Enter isbn" name="isbn">
+      <input type="number" class="form-control" id="isbn" placeholder="Enter isbn" name="isbn" required>
     </div>
 
     <div class="form-group">
       <label for="author">Author:</label>
-      <input type="text" class="form-control" id="author" placeholder="Enter author" name="author">
+      <input type="text" class="form-control" id="author" placeholder="Enter author" name="author" required>
     </div>
 
     <div class="form-group">
       <label for="price">Price:</label>
-      <input type="text" class="form-control" id="price" placeholder="Enter price" name="price">
+      <input type="text" class="form-control" id="price" placeholder="Enter price" name="price" required>
     </div>
 
     <div class="form-group">
-      <label for="img_url">Image URL:</label>
-      <input type="text" class="form-control" id="img_url" placeholder="Enter img_url" name="img_url">
+      <label for="price">old Price:</label>
+      <input type="text" class="form-control" id="old_price" placeholder="Enter price" name="old_price" required>
+    </div>
+                
+    <div class="form-group">
+      <label for="img_url">Image URL:(images/yourfilename.jpg)</label>
+      <input type="text" class="form-control" id="img_url" placeholder="Enter img_url" name="img_url" required>
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
@@ -134,4 +139,5 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+</div>
 <?php include ("includes/footer.php"); ?>

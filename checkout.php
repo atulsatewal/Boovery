@@ -26,7 +26,7 @@ sec_session_start();
 
 	<div class="home">
 		<div class="home_container">
-			<div class="home_background" style="background-image:url(images/cart.jpg)"></div>
+			<div class="home_background" style="background-image:url(images/cheackout.jpg)"></div>
 			<div class="home_content_container">
 				<div class="container">
 					<div class="row">
@@ -97,9 +97,7 @@ sec_session_start();
 									<select name="checkout_city" id="checkout_city" name="checkout_city" class="dropdown_item_select checkout_input" require="required">
 										<option></option>
 										<option>City</option>
-										<option>City</option>
-										<option>City</option>
-										<option>City</option>
+										<option>Town</option>
 									</select>
 								</div>
 								<div>
@@ -187,19 +185,9 @@ sec_session_start();
 									<input type="radio" checked="checked" name="radio">
 									<span class="checkmark"></span>
 								</label>
-								<label class="payment_option clearfix">Credit card
-									<input type="radio" name="radio">
-									<span class="checkmark"></span>
-								</label>
-								<label class="payment_option clearfix">Direct bank transfer
-									<input type="radio"  name="radio">
-									<span class="checkmark"></span>
-								</label>
-							</div>
-						</div>
 
 						<!-- Order Text -->
-						<div class="order_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra temp or so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus.</div>
+						<div class="order_text"><br> stay in touch!...</div>
 
 					</div>
 				</div>
@@ -209,31 +197,7 @@ sec_session_start();
 
 	<!-- Footer -->
 	
-	<div class="footer_overlay"></div>
-	<footer class="footer">
-		<div class="footer_background" style="background-image:url(images/footer.jpg)"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="footer_content d-flex flex-lg-row flex-column align-items-center justify-content-lg-start justify-content-center">
-						<div class="footer_logo"><a href="#">Sublime.</a></div>
-						<div class="copyright ml-auto mr-auto"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-						<div class="footer_social ml-lg-auto">
-							<ul>
-								<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-</div>
+	
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>

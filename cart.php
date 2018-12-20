@@ -25,7 +25,7 @@ sec_session_start();
 
 	<div class="home">
 		<div class="home_container">
-			<div class="home_background" style="background-image:url(images/cart.jpg)"></div>
+			<div class="home_background" style="background-image:url(images/cartbanner.jpg)"></div>
 			<div class="home_content_container">
 				<div class="container">
 					<div class="row">
@@ -36,6 +36,7 @@ sec_session_start();
 										<li><a href="index.html">Home</a></li>
 										<li><a href="categories.php">Categories</a></li>
 										<li>Shopping Cart</li>
+                                        
 									</ul>
 								</div>
 							</div>
@@ -133,17 +134,7 @@ sec_session_start();
 							<label class="delivery_option clearfix">Next day delivery
 								<input type="radio" name="radio">
 								<span class="checkmark"></span>
-								<span class="delivery_price">$4.99</span>
-							</label>
-							<label class="delivery_option clearfix">Standard delivery
-								<input type="radio" name="radio">
-								<span class="checkmark"></span>
-								<span class="delivery_price">$1.99</span>
-							</label>
-							<label class="delivery_option clearfix">Personal pickup
-								<input type="radio" checked="checked" name="radio">
-								<span class="checkmark"></span>
-								<span class="delivery_price">Free</span>
+								<span class="delivery_price">Rs.0.00</span>
 							</label>
 						</div>
 					</div>
@@ -152,23 +143,7 @@ sec_session_start();
 				<div class="col-lg-6 offset-lg-2">
 					<div class="cart_total">
 						<div class="section_title">Cart total</div>
-						<div class="section_subtitle">Final info</div>
-						<div class="cart_total_container">
-							<ul>
-								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div class="cart_total_title">Subtotal</div>
-									<div class="cart_total_value ml-auto">$790.90</div>
-								</li>
-								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div class="cart_total_title">Shipping</div>
-									<div class="cart_total_value ml-auto">Free</div>
-								</li>
-								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div class="cart_total_title">Total</div>
-									<div class="cart_total_value ml-auto">$790.90</div>
-								</li>
-							</ul>
-						</div>
+						<div class="section_subtitle">click below to proceed further</div>
 						<div class="button checkout_button"><a href="checkout.php">Proceed to checkout</a></div>
 					</div>
 				</div>

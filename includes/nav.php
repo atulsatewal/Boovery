@@ -32,7 +32,9 @@
             <i class="fa fa-book"></i> <span> All books </span>
           </a>
         </li>
-                <li class="treeview <?php if($currentPage =='orders' ){echo 'active';}?>">
+        
+          
+        <li class="treeview <?php if($currentPage =='orders' ){echo 'active';}?>">
                     <a href="orders.php">
                        <i class="fa fa-server"></i> <span>All Orders</span>
                     </a>
@@ -44,6 +46,17 @@
           </a>
         </li>
 
+       <li class="treeview <?php if($currentPage =='allmembers'){echo 'active';}?>">
+                    <a href="allmembers.php">
+                       <i class="fa fa-user"></i> <span>All Members</span>
+                    </a>
+                </li>
+
+        <li class="treeview <?php if($currentPage =='contactadmin'){echo 'active';}?>">
+                    <a href="contactadmin.php">
+                       <i class="fa fa-phone"></i><span>Contacts</span>
+                    </a>
+          </li>  
 
         <?php } ?>
           
