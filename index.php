@@ -75,25 +75,25 @@
                 <div class="control-group">
                     <label class="control-label" for="inputUser">Username</label>
                     <div class="controls">
-                        <input type="text" id="username" class="form-control" name="username" placeholder="Username">
+                        <input type="text" id="username" class="form-control" name="username" placeholder="Username" required>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="inputEmail">Email</label>
                         <div class="controls">
-                            <input type="text" id="email" class="form-control" name="email" placeholder="Email">
+                            <input type="text" id="email" class="form-control" name="email" placeholder="Email" required>
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="inputRole">Role</label>
                         <div class="controls">
-                            <input type="text" id="role" class="form-control" name="role" placeholder="Role">
+                            <input type="text" id="role" class="form-control" name="role" placeholder="Role" required>
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="inputPassword">Password</label>
                         <div class="controls">
-                            <input type="password" name="password" class="form-control" id="password" placeholder="Password">
-                            <input type="hidden" name="p" id="p" value="">
+                            <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+                            <input type="hidden" name="p" id="p" value="" required>
                         </div>
                     </div>
                     <div class="control-group">
