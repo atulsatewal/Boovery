@@ -106,8 +106,8 @@
     <div class="header_social">
         <ul>
            
-            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/booksandbooks/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.facebook.com/pg/Online-Book-Store-Boovery-2281474862176583/posts/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
             
         </ul>
     </div>
