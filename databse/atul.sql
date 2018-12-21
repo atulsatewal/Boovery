@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 20, 2018 at 12:34 PM
+-- Generation Time: Dec 21, 2018 at 07:54 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -54,7 +54,8 @@ INSERT INTO `cart` (`id`, `user_id`, `status`, `delivery_address`, `city`, `pinc
 (7, 3, 'closed', NULL, NULL, NULL, NULL, 'cash', 0.00, '2018-11-04 06:07:15', '2018-11-04 06:07:15'),
 (8, 2, 'closed', NULL, NULL, NULL, NULL, 'cash', 0.00, '2018-11-07 11:38:29', '2018-11-07 11:38:29'),
 (9, 2, 'open', NULL, NULL, NULL, NULL, 'cash', 0.00, '2018-11-07 12:04:38', '2018-11-07 12:04:38'),
-(10, 3, 'closed', NULL, NULL, NULL, NULL, 'cash', 0.00, '2018-12-20 11:02:01', '2018-12-20 11:02:01');
+(10, 3, 'closed', NULL, NULL, NULL, NULL, 'cash', 0.00, '2018-12-20 11:02:01', '2018-12-20 11:02:01'),
+(11, 7, 'closed', NULL, NULL, NULL, NULL, 'cash', 0.00, '2018-12-21 17:26:05', '2018-12-21 17:26:05');
 
 -- --------------------------------------------------------
 
@@ -82,7 +83,8 @@ INSERT INTO `cart_items` (`cart_id`, `item_id`, `quantity`) VALUES
 (7, 1, 1),
 (8, 1, 1),
 (8, 3, 1),
-(10, 14, 1);
+(10, 14, 1),
+(11, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -130,7 +132,10 @@ CREATE TABLE `contact_form` (
 
 INSERT INTO `contact_form` (`Id`, `Name`, `LastName`, `Email`, `Message`, `time`) VALUES
 (1, 'atul', 'satewal', 'atulsatewal@gmail.com', 'great website', '2018-12-19 19:23:25'),
-(2, 'rajesh', 'kumar', 'rajeshkumar@gmail.com', 'had a great experience here ', '2018-12-19 19:23:25');
+(2, 'rajesh', 'kumar', 'rajeshkumar@gmail.com', 'had a great experience here ', '2018-12-19 19:23:25'),
+(3, 'manan', 'kumar', 'manankumar@gmail.com', '123456', '2018-12-21 16:30:26'),
+(4, 'kumar', 'vishvas', 'kumar@gmail.com', '123456dsdsfds', '2018-12-21 16:31:21'),
+(5, 'atul', 'kumar', 'rer@gmail.com', 'dsfsdafsdf', '2018-12-21 16:32:24');
 
 -- --------------------------------------------------------
 
@@ -205,7 +210,8 @@ INSERT INTO `members` (`id`, `username`, `email`, `role`, `password`, `salt`, `c
 (2, 'user', 'user@email.com', 'user', 'eefd49d4f844f752caf0686ba00fcc711e34c8531aeb59eb73228f4ede911077362b9b0fe5f84195ad18c46a38dcb0815b0f3952fbe2d0deac3849b112716260', '7247444c04ed8658f2213abc97c58ee966b2bb3a3eaf25915921b79a369bb3db843c0aca1aeff31a3fc18cf357db7f883cef52305b59f9dfeb7156e65af1e6f3', '2018-10-20 04:38:42', '2018-10-20 04:38:42'),
 (3, 'atulsatewal', 'atulsatewal@gmail.com', 'user', '5902602db3ebd57531b118133b79caebc04cf750e11396994dfc422980f360d1836ff040d7eb1cc4574c1288439af63596b47e86c53cb07573e3f82580bbc85e', 'dd0fd28359a296d1fbf1cfc3de4dd75672cc02965e735a3d44f12fcc7d3388f279b928ae5f5ad61c1812f7b2ae538465b6c66d03f7a4d7ff423298e40dfc82ef', '2018-10-31 03:43:42', '2018-10-31 03:43:42'),
 (4, 'vishal', 'vishal@gmail.com', 'user', 'be2f60b3418e5c03df19f0427c0ac8ce790eecfd66939e070a2c5284adbdd1fb92e28488548fb37a86b93cfd0c5ba440d4bbe0ae6d0f0a1d03d8875bc1fa62e0', '030475f6d9a809ffb1173c60c9a1a496fc9d2c9067f28ff785899f8d5afa1fee7754f7c62752e4c1e879406bb8bce9d9a514c51699958c2b670237b9a72ceb74', '2018-10-31 05:03:28', '2018-10-31 05:03:28'),
-(5, 'renu', 'renu@gmail.com', 'user', '1ab282d547332aa6555edcf7d2064e7b5779e78ffcd0040aea560a7c9b42373fe726dbc3c6cc7f3e9036d9ad89e22fe765a114debd54cda80df6c60c0c423cd4', '9fe7dff2424b9fc34974703028b53bb01dd998eb41d90f973ffa3a1dcdc913fe0e561d5b4fa03781d408dfdea9cc33e0a9f3dcc5dc3126cf3d88e9076876e2eb', '2018-11-03 03:34:26', '2018-11-03 03:34:26');
+(5, 'renu', 'renu@gmail.com', 'user', '1ab282d547332aa6555edcf7d2064e7b5779e78ffcd0040aea560a7c9b42373fe726dbc3c6cc7f3e9036d9ad89e22fe765a114debd54cda80df6c60c0c423cd4', '9fe7dff2424b9fc34974703028b53bb01dd998eb41d90f973ffa3a1dcdc913fe0e561d5b4fa03781d408dfdea9cc33e0a9f3dcc5dc3126cf3d88e9076876e2eb', '2018-11-03 03:34:26', '2018-11-03 03:34:26'),
+(7, 'raman', 'raman@gmail.com', 'user', 'aa96f1c1163e87764504ec194462f1d177b313f07c0f386550a6995340ff68b5c1375208debba495cd7bec98ca03cbe6a192f63cc3e553617fd660a362729261', 'c898b254962bdfeeafee41650bfd392c27927e2826f69534a5c4f457f3d663e2d08a64998083cff8f9fe99617363ec9e84a0687f3e233c41bea2afdbf8cbbf02', '2018-12-20 17:54:34', '2018-12-20 17:54:34');
 
 -- --------------------------------------------------------
 
@@ -238,7 +244,27 @@ INSERT INTO `orders` (`order_ID`, `cart_id`, `name`, `country`, `addressLine1`, 
 (3, 5, 'vishal', 'India', 'j105/1 gautam nagar', 'new delhi', 110049, 'City', 9910597341, 'cash', 'vishal@gmail.com', 'N'),
 (4, 6, 'renu', 'India', 'd5/1 3rd floor ', 'chennai', 110047, 'City', 7894512342, 'cash', 'renu@gmail.com', 'N'),
 (5, 8, 'user', 'India', 'D-8', 'Gulmohar Park', 110049, 'City', 9650043051, 'cash', 'user@email.com', 'N'),
-(6, 10, 'atulsatewal', 'USA', 'j103/1 gautam nagar', 'new delhi', 110049, 'Town', 7894512342, 'cash', 'atulsatewal@gmail.com', 'N');
+(6, 10, 'atulsatewal', 'USA', 'j103/1 gautam nagar', 'new delhi', 110049, 'Town', 7894512342, 'cash', 'atulsatewal@gmail.com', 'N'),
+(7, 11, 'raman', 'Sweden', 'la/4554, newyork ', 'swedan', 110049, 'City', 7894567894, 'cash', 'raman@gmail.com', 'N');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `subscription`
+--
+
+CREATE TABLE `subscription` (
+  `id` int(11) NOT NULL,
+  `email` varchar(300) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `subscription`
+--
+
+INSERT INTO `subscription` (`id`, `email`, `time`) VALUES
+(1, 'admin@email.com', '2018-12-21 17:22:22');
 
 --
 -- Indexes for dumped tables
@@ -289,6 +315,12 @@ ALTER TABLE `orders`
   ADD PRIMARY KEY (`order_ID`);
 
 --
+-- Indexes for table `subscription`
+--
+ALTER TABLE `subscription`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -296,7 +328,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -308,7 +340,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `contact_form`
 --
 ALTER TABLE `contact_form`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `items`
@@ -320,13 +352,19 @@ ALTER TABLE `items`
 -- AUTO_INCREMENT for table `members`
 --
 ALTER TABLE `members`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `order_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `subscription`
+--
+ALTER TABLE `subscription`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
