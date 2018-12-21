@@ -262,9 +262,9 @@
 						<div class="newsletter_title">Subscribe to our newsletter</div>
 						<div class="newsletter_text"><p>Please Enter Your Valid E-Mail Address </p></div>
 						<div class="newsletter_form_container">
-							<form action="#" id="newsletter_form" class="newsletter_form">
-								<input type="email" class="newsletter_input" required="required">
-								<button class="newsletter_button trans_200"><span>Subscribe</span></button>
+							<form action="subscription.php" id="newsletter_form" class="newsletter_form" method="post">
+								<input type="email"  name="email" class="newsletter_input" required="required">
+								<button class="newsletter_button trans_200" type="submit"><span>Subscribe</span></button>
 							</form>
 						</div>
 					</div>

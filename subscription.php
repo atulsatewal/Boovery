@@ -1,3 +1,4 @@
+
 <?php
 
 $con= mysqli_connect('localhost','root','');
@@ -11,13 +12,11 @@ if(!$con)
         echo 'DATABASE IS NOT SELECTED ';
     }
         
-    $Name = $_POST['Name'];
-    $LastName = $_POST['LastName'];
-    $Email= $_POST['Email'];
-    $Message= $_POST['Message'];
+    $email=$_POST['email'];
+    
 
 
-$sql="INSERT INTO contact_form(Name,LastName ,Email,Message) VALUES('$Name','$LastName','$Email','$Message')";
+$sql="INSERT INTO Subscription(email) VALUES('$email')";
 
 if(!mysqli_query($con,$sql))
 {
@@ -27,6 +26,8 @@ else
 {
     echo 'SUBMITTED';
 }
-header("refresh:1; url=../contact.php");//
+header("refresh:1; url=dashboard_user.php");//
 
 ?>
+
+

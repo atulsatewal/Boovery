@@ -56,7 +56,12 @@
                     <a href="contactadmin.php">
                        <i class="fa fa-phone"></i><span>Contacts</span>
                     </a>
-          </li>  
+          </li> 
+        <li class="treeview <?php if($currentPage =='viewsubscription'){echo 'active';}?>">
+                    <a href="viewsubscription.php">
+                       <i class="fa fa-newspaper-o"></i><span>subscription/newsletter</span>
+                    </a>
+          </li>    
 
         <?php } ?>
           
