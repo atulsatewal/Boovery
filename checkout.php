@@ -188,7 +188,19 @@ sec_session_start();
 
 						<!-- Order Text -->
 						<div class="order_text"><br> stay in touch!...</div>
-
+                            <?php 
+                                $to = $_SESSION['user_email'];
+                                $message = "YOUR ORDER HAS BEEN CONFIRMED";
+                                $subject = "ORDER CONFIRMED";
+                                if(mail($to,$subject,$message))
+                                {
+                                ?>
+                                <div class="alert alert-success">
+                                <strong>Success!</strong> confirmation mail is sent to your registerd gmail account
+                                </div>
+                            <?php 
+                                }
+                                ?>
 					</div>
 				</div>
 			</div>
