@@ -17,7 +17,7 @@ mysqli_select_db($con,'atul');
         //show inovies list as options//
         $query= mysqli_query($con,"select * from orders");
         while($invoice =mysqli_fetch_array($query)){
-            echo "<option value>
+            echo "<option value ='".$invoice['invoiceID']."'>".$invoice['invoiceID'].".</option>";
         }
         
         
@@ -26,7 +26,7 @@ mysqli_select_db($con,'atul');
             
             </select>
         
-        
+        <input type="submit" value="generate">
         </form>
     
     
